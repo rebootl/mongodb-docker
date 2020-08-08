@@ -9,7 +9,7 @@
 #  --network "${APP}-network" \
 #  mongod --replSet rs0
 
-docker run -p 27017:27017 \
+docker run -p "${LOCALPORT}":27017 \
   -e MONGO_INITDB_ROOT_USERNAME="$USER" \
   -e MONGO_INITDB_ROOT_PASSWORD="$PASSWORD" \
   -e MONGO_INITDB_DATABASE="$APP" \
